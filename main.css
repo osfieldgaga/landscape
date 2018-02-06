@@ -1,0 +1,289 @@
+@font-face {
+    font-family: geo;
+    src: url("geometria.otf") format("opentype"),
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates:500');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+@keyframes scale{
+	to{
+		transform: scale(1.04);
+		
+	}
+
+}
+
+@keyframes barAppear{
+	from{transform: translate(0, -100%);}
+	to{transform: translate(0,0);}
+}
+@keyframes menuAppear{
+	from{transform: translate(100%,0);}
+	to{transform: translate(0,0);}
+}
+
+@keyframes menuDisappear{
+	from{transform: translate(0,0);}
+	to{transform: translate(100%,0);}
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%
+}
+* {
+    box-sizing: border-box;
+}
+.main{
+	background-color: white;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	min-height: 100%
+}
+
+.header{
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	background-color: #ffffff;
+
+	animation: barAppear 500ms;
+
+}
+
+.separation{
+	background-color: #ccccccff;
+	height: 2px;
+	width: 90%;
+	margin: auto;
+	position: relative;
+	
+}
+
+.header p{
+	text-align: center;
+	vertical-align: middle;
+	height: 100%;
+	line-height: 80px;
+	font-family: 'Dancing Script', cursive;
+	font-family: 'Learning Curve';
+	font-size: 3rem;
+	margin: 30px;
+	margin: 0;
+}
+
+
+.menubtn1 div{
+	display: block;
+	margin-top: 10px;
+	height: 9%;
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 25px;
+	border: 1px solid #ffffff
+}
+
+.menu-btn2{
+	width: 45px;
+	height: 40px;
+	margin: 15px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	vertical-align: middle;
+	line-height: 80px;
+
+}
+.menu-btn2 div{
+	display: block;
+	margin-top: 10px;
+	height: 9%;
+	width: 100%;
+	background-color: #ffffff;
+	border-radius: 50px;
+}
+
+.menubtn{
+	width: 45px;
+	height: 40px;
+	padding: 0;
+	background-color: #80808000;
+	border-style: none;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+.menubtn div{
+	display: block;
+	margin-top: 10px;
+	height: 9%;
+	width: 100%;	
+	border-radius: 50px;
+	z-index: 199;
+}
+
+.presentation .menubtn div{
+	background-color: #ffffff;
+}
+.header .menubtn div{
+	background-color: #333333;
+}
+#btn1{
+	margin: 45px;
+}
+#btn2{
+	margin: 20px;
+}
+
+.menu{
+	float: right;
+	background-color: #333333ff;
+	width: 350px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 200;
+
+	animation: menuAppear 500ms;
+	animation-fill-mode: forwards;	
+}
+
+.presentation{
+	background-image:  url('presentation.png');
+	width: 100%;
+	height: 600px;
+	background-position: center;
+}
+.presentation p{
+	font-family: 'Learning Curve';
+	color: #ffffff;
+	text-align: center;
+
+}
+
+.text-presentation{
+	position: relative;
+	top: 240px;
+	left: 25;
+	/*margin-left: 75px;*/
+	margin: auto;
+}
+
+#p1{
+	font-size: 5rem;
+	margin: 0;
+}
+#p2{
+	font-size: 3rem;
+	margin:0;
+}
+
+footer{
+	background-color: #333333ff;
+	width: 100%;
+	height: 46px;
+	position: fixed;
+	bottom: 0;
+}
+footer p{
+	color: #ffffff;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 46px;
+	font-family: 'Montserrat', sans-serif;
+	margin: auto;
+}
+
+.image-container{
+	width: 85%;
+	margin: auto;
+	position: relative;
+	top: 35px;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+	
+}
+.column{
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  
+ 
+}
+
+.close-menu{
+	width: 40px;
+	height: 40px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: #80808000;
+	border-style: none;
+}
+.close-menu div{
+	width: 100%;
+	height: 9%;
+	background-color: #ffffff;
+	padding:0;
+	margin: 0;
+	z-index: 198;
+}
+.close-menu #x1{
+	
+	transform: translate(0,50%);
+	transform: rotate(45deg);
+}
+.close-menu #x2{
+	
+	transform: translate(0,-50%);
+	transform: rotate(-45deg);
+}
+
+
+img:hover {
+	cursor: pointer;
+	animation: scale 500ms ;
+	animation-fill-mode: forwards;
+}
+
+@media (max-width: 800px){
+	.column{
+	flex: 50%;
+	max-width: 50%;
+	padding: 0 4px;
+}
+
+	
+}
+
+@media (max-width: 600px){
+	.column{
+	flex: 100%;
+	max-width: 100%;
+	padding: 0 4px;
+}
